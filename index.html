@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bexleyheath Car Body Repairs | Josh — Flawless Bodywork in DA6</title>
+<meta name="description" content="5-star rated car body repairs in Bexleyheath. Dents, bumper scuffs, panel beating, welding, and low-bake oven resprays by Josh. Family run, insurance approved. Call 07850 267432.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --slate-dark:   #0f172a;
+  --slate-panel:  #1e293b;
+  --slate-mid:    #334155;
+  --text-light:   #64748b;
+  --bg-light:     #f8fafc;
+  --bg-pale:      #f1f5f9;
+  --white:        #ffffff;
+  --border:       #e2e8f0;
+  --electric:     #0284c7;
+  --electric-lt:  #e0f2fe;
+  --electric-mid: #0369a1;
+  --electric-dark:#075985;
+  --amber:        #f59e0b;
+  --green:        #25d366;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--slate-dark); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+  height: 68px; padding: 0 2.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 8px rgba(15,23,42,0.06);
+}
+.nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; color: var(--slate-dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.nav-logo-dot { width: 8px; height: 8px; background: var(--electric); border-radius: 50%; display: inline-block; }
+.nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); text-decoration: none; padding: 0.45rem 0.85rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover { color: var(--slate-dark); background: var(--bg-light); }
+.nav-cta { background: var(--electric) !important; color: white !important; padding: 0.55rem 1.25rem !important; border-radius: 6px; font-weight: 700 !important; margin-left: 0.5rem; box-shadow: 0 2px 8px rgba(2,132,199,0.25); }
+.nav-cta:hover { background: var(--electric-mid) !important; color: white !important; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.burger span { width: 22px; height: 2px; background: var(--slate-dark); border-radius: 2px; }
+
+/* ─── HERO ─── */
+.hero-wrap { position: relative; min-height: 100vh; background: var(--slate-dark); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1800&auto=format&fit=crop&q=60') center/cover no-repeat; opacity: 0.22; transform: scale(1.04); animation: slow-zoom 20s ease-out forwards; }
+@keyframes slow-zoom { to { transform: scale(1.0); } }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.65) 60%, rgba(2,132,199,0.15) 100%); }
+.hero-inner { position: relative; z-index: 10; max-width: 1200px; margin: 0 auto; padding: 120px 2.5rem 80px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 70px; align-items: center; }
+.hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #38bdf8; background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.25); padding: 0.35rem 0.85rem; border-radius: 20px; margin-bottom: 1.75rem; width: fit-content; }
+.tag-dot { width: 5px; height: 5px; background: #38bdf8; border-radius: 50%; animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1;}50%{opacity:0.2;} }
+h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.0; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1.5rem; }
+h1 .accent { color: #38bdf8; }
+.hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.62); line-height: 1.75; max-width: 480px; margin-bottom: 2.5rem; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--electric); color: white; text-decoration: none; padding: 1rem 1.85rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 6px 20px rgba(2,132,199,0.4); transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: var(--electric-mid); transform: translateY(-1px); }
+.btn-outline-light { display: inline-flex; align-items: center; gap: 0.5rem; border: 1.5px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05); text-decoration: none; padding: 1rem 1.85rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; transition: border-color 0.2s, background 0.2s; }
+.btn-outline-light:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1); }
+.hero-note { font-size: 0.8rem; color: rgba(255,255,255,0.38); font-family: 'DM Mono', monospace; }
+.hero-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 2.25rem; backdrop-filter: blur(20px); }
+.hc-stars { color: var(--amber); font-size: 1rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; }
+.hc-stars span { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+.hc-quote { font-size: 0.95rem; color: rgba(255,255,255,0.78); font-style: italic; line-height: 1.75; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid var(--electric); }
+.hc-author { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.75rem; }
+.hc-avi { width: 38px; height: 38px; background: var(--electric); border-radius: 50%; color: white; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.hc-name { font-size: 0.875rem; font-weight: 700; color: white; }
+.hc-sub { font-size: 0.72rem; color: rgba(255,255,255,0.38); font-family: 'DM Mono', monospace; }
+.hc-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 1.75rem; }
+.hc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.hc-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.32); margin-bottom: 0.25rem; }
+.hc-val { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: white; }
+.hero-strip { position: relative; z-index: 10; border-top: 1px solid rgba(255,255,255,0.07); padding: 1.25rem 2.5rem; }
+.hero-strip-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.strip-item { display: flex; align-items: center; gap: 0.6rem; }
+.strip-check { width: 18px; height: 18px; background: rgba(56,189,248,0.18); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: #38bdf8; flex-shrink: 0; }
+.strip-text { font-size: 0.8rem; color: rgba(255,255,255,0.5); font-weight: 500; }
+.strip-text strong { color: rgba(255,255,255,0.78); }
+
+/* ─── STATS BAR ─── */
+.stats-bar { background: var(--slate-dark); padding: 56px 2.5rem; }
+.stats-bar-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-block { text-align: center; padding: 1.25rem 1rem; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat-block:last-child { border-right: none; }
+.stat-num { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: white; display: block; line-height: 1; }
+.stat-accent { color: var(--electric); }
+.stat-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.38); margin-top: 0.5rem; }
+
+/* ─── COMMON ─── */
+section { padding: 96px 2.5rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-kicker { font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--electric); margin-bottom: 0.65rem; display: block; }
+h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(2rem, 4vw, 2.75rem); color: var(--slate-dark); letter-spacing: -0.025em; margin-bottom: 1rem; line-height: 1.1; }
+.section-lead { font-size: 1.05rem; color: var(--text-light); max-width: 600px; margin-bottom: 3.5rem; line-height: 1.75; }
+
+/* ─── SERVICES ─── */
+#services { background: var(--bg-light); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.service-card { background: var(--white); padding: 2.25rem 2rem; border-radius: 10px; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+.service-card::before { content: attr(data-num); position: absolute; top: 1.25rem; right: 1.5rem; font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--border); line-height: 1; pointer-events: none; transition: color 0.2s; }
+.service-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(15,23,42,0.07); }
+.service-card:hover::before { color: var(--electric-lt); }
+.service-icon { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
+.service-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--slate-dark); }
+.service-desc { font-size: 0.875rem; color: var(--text-light); line-height: 1.65; }
+.insurance-strip { margin-top: 2.5rem; background: var(--slate-dark); color: white; padding: 2.5rem 3rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.ins-kicker { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: #38bdf8; margin-bottom: 0.4rem; }
+.ins-heading { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.35rem; margin-bottom: 0.3rem; }
+.ins-sub { font-size: 0.875rem; color: rgba(255,255,255,0.5); }
+
+/* ═══════════════════════════════════════
+   BEFORE & AFTER — compact card grid
+   ═══════════════════════════════════════ */
+#work { background: var(--white); }
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ba-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.ba-card:hover { box-shadow: 0 10px 28px rgba(15,23,42,0.08); transform: translateY(-2px); }
+
+/* Side-by-side photo pair */
+.ba-photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 170px;
+  position: relative;
+}
+.ba-pane {
+  position: relative; overflow: hidden;
+  background: var(--bg-pale);
+}
+.ba-pane img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s; }
+.ba-card:hover .ba-pane img { transform: scale(1.04); }
+.ba-pane + .ba-pane { border-left: 2px solid white; }
+.ba-pill {
+  position: absolute; top: 0.5rem; left: 0.5rem;
+  font-family: 'DM Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.22rem 0.55rem; border-radius: 3px; font-weight: 500;
+}
+.pill-before { background: rgba(15,23,42,0.75); color: rgba(255,255,255,0.75); }
+.pill-after  { background: var(--electric); color: white; }
+
+/* Plate blur */
+.plate-blur {
+  position: absolute; bottom: 12%; left: 50%; transform: translateX(-50%);
+  width: 28%; height: 6%; background: rgba(15,23,42,0.9); border-radius: 2px;
+  backdrop-filter: blur(4px);
+}
+
+/* Card body */
+.ba-body {
+  padding: 1rem 1.1rem 1.1rem;
+}
+.ba-repair-label {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--electric); margin-bottom: 0.3rem;
+}
+.ba-repair-title {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+  font-size: 0.88rem; color: var(--slate-dark); margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.ba-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 0.75rem; }
+.ba-review-stars { color: var(--amber); font-size: 0.75rem; margin-bottom: 0.35rem; }
+.ba-review-text {
+  font-size: 0.8rem; color: var(--slate-mid); font-style: italic;
+  line-height: 1.6; margin-bottom: 0.65rem;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.ba-reviewer {
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.ba-avi { width: 26px; height: 26px; border-radius: 50%; color: white; font-weight: 700; font-size: 0.65rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ba-reviewer-name { font-size: 0.78rem; font-weight: 700; color: var(--slate-dark); }
+.ba-reviewer-meta { font-size: 0.67rem; color: var(--text-light); font-family: 'DM Mono', monospace; }
+
+/* ═══════════════════════════════════════
+   REVIEWS — 6 compact cards, 3-col
+   ═══════════════════════════════════════ */
+#reviews { background: var(--bg-light); }
+.reviews-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 2rem; }
+.google-badge { background: var(--white); border: 1px solid var(--border); padding: 0.9rem 1.4rem; border-radius: 10px; display: flex; align-items: center; gap: 1rem; }
+.g-circle { width: 40px; height: 40px; background: #ea4335; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: 1.1rem; font-family: Arial, sans-serif; flex-shrink: 0; }
+.g-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1; color: var(--slate-dark); }
+.g-stars { color: var(--amber); font-size: 0.82rem; }
+.g-label { font-family: 'DM Mono', monospace; font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-light); margin-top: 0.1rem; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.review-card {
+  background: var(--white); border: 1px solid var(--border);
+  padding: 1.5rem; border-radius: 10px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.review-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15,23,42,0.06); }
+.rc-stars { color: var(--amber); font-size: 0.82rem; margin-bottom: 0.75rem; }
+.rc-text {
+  font-size: 0.845rem; color: var(--slate-mid); line-height: 1.65;
+  margin-bottom: 1.1rem; font-style: italic; flex: 1;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+.rc-user { display: flex; align-items: center; gap: 0.6rem; border-top: 1px solid var(--border); padding-top: 0.9rem; }
+.rc-avi { width: 32px; height: 32px; border-radius: 50%; color: white; font-weight: 700; font-size: 0.72rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.rc-name { font-size: 0.82rem; font-weight: 700; color: var(--slate-dark); }
+.rc-meta { font-size: 0.67rem; color: var(--text-light); font-family: 'DM Mono', monospace; margin-top: 0.08rem; }
+.reviews-cta { margin-top: 1.75rem; text-align: center; }
+.reviews-cta a { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--text-light); text-decoration: none; letter-spacing: 0.04em; }
+.reviews-cta a:hover { color: var(--electric); }
+
+/* ─── ABOUT ─── */
+#about { padding: 0; }
+.about-inner { background: var(--slate-dark); padding: 64px 2.5rem; }
+.about-inner-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 0.55fr 1fr; gap: 60px; align-items: center; }
+.about-img { position: relative; }
+.about-img-frame { border-radius: 10px; overflow: hidden; aspect-ratio: 3/2; background: #1e293b; max-height: 280px; }
+.about-img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-badge { position: absolute; bottom: -0.75rem; right: -0.75rem; background: var(--electric); color: white; padding: 1rem 1.25rem; border-radius: 8px; text-align: center; box-shadow: 0 10px 28px rgba(0,0,0,0.35); }
+.ab-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.75rem; display: block; line-height: 1; }
+.ab-text { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; margin-top: 0.2rem; font-family: 'DM Mono', monospace; }
+.about-content .section-kicker { color: rgba(255,255,255,0.35); }
+.about-content h2 { color: white; margin-bottom: 1.5rem; }
+.about-content p { font-size: 0.975rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 1.25rem; }
+.about-content p strong { color: rgba(255,255,255,0.88); }
+.about-pills { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.75rem; }
+.about-pill { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.45rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.55); }
+
+/* ═══════════════════════════════════════
+   CONTACT — clean icon-row grid
+   ═══════════════════════════════════════ */
+#contact { background: var(--white); }
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Left: stacked info rows */
+.contact-rows { display: flex; flex-direction: column; gap: 1rem; }
+
+.cinfo-row {
+  display: flex; align-items: flex-start; gap: 1.1rem;
+  background: var(--bg-light); border: 1px solid var(--border);
+  border-radius: 10px; padding: 1.25rem 1.4rem;
+  text-decoration: none; color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.cinfo-row:hover { border-color: var(--electric); box-shadow: 0 4px 16px rgba(2,132,199,0.1); }
+
+.cinfo-icon-box {
+  width: 48px; height: 48px; border-radius: 8px;
+  background: var(--slate-dark); display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.cinfo-icon-box.blue  { background: var(--electric); }
+.cinfo-icon-box.green { background: #1a6b3a; }
+.cinfo-icon-box.dark  { background: var(--slate-dark); }
+
+.cinfo-text {}
+.cinfo-label {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-light); margin-bottom: 0.25rem;
+}
+.cinfo-main {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+  font-size: 1.1rem; color: var(--slate-dark); line-height: 1.2;
+}
+.cinfo-sub {
+  font-size: 0.82rem; color: var(--text-light); margin-top: 0.2rem; line-height: 1.5;
+}
+
+/* Hours block */
+.cinfo-hours { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.2rem; }
+.cinfo-hour-row { display: flex; justify-content: space-between; font-size: 0.85rem; gap: 1.5rem; }
+.cinfo-hour-row .day { color: var(--slate-mid); font-weight: 500; }
+.cinfo-hour-row .time { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--slate-dark); font-weight: 600; }
+.cinfo-hour-row.closed .day, .cinfo-hour-row.closed .time { color: var(--text-light); font-weight: 400; }
+
+/* Right: map */
+.contact-map { border-radius: 10px; overflow: hidden; border: 1px solid var(--border); height: 480px; }
+.contact-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ─── FOOTER ─── */
+footer { background: var(--slate-dark); padding: 2.5rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: white; text-decoration: none; }
+.footer-logo span { color: var(--electric); }
+.footer-mid { font-size: 0.75rem; color: rgba(255,255,255,0.3); font-family: 'DM Mono', monospace; text-align: center; }
+.footer-mid a { color: rgba(255,255,255,0.45); text-decoration: none; }
+.footer-mid a:hover { color: rgba(255,255,255,0.7); }
+.footer-nav { display: flex; gap: 1.5rem; }
+.footer-nav a { font-size: 0.75rem; color: rgba(255,255,255,0.35); text-decoration: none; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
+.footer-nav a:hover { color: rgba(255,255,255,0.65); }
+
+/* ─── STICKY CALL ─── */
+.sticky-call { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 300; background: var(--electric); color: white; padding: 0.85rem 1.5rem; border-radius: 30px; font-weight: 700; font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 8px 24px rgba(2,132,199,0.4); transition: background 0.2s, transform 0.2s; }
+.sticky-call:hover { background: var(--electric-mid); transform: translateY(-2px); }
+
+/* ─── ANIMATIONS ─── */
+.fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .ba-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-block:nth-child(2) { border-right: none; }
+  .stat-block:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.08); }
+  .contact-layout { grid-template-columns: 1fr 1.2fr; }
+}
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; padding-top: 100px; gap: 40px; }
+  .about-inner-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-img-frame { aspect-ratio: 16/7; max-height: 220px; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-map { height: 320px; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .burger { display: flex; }
+  section { padding: 64px 1.25rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .ba-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  nav { padding: 0 1.25rem; }
+  .hero-inner { padding: 95px 1.25rem 60px; }
+  .stats-bar { padding: 48px 1.25rem; }
+  .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-block { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .about-inner { padding: 64px 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Bexleyheath Car Body Repairs
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Before & After</a></li>
+    <li><a href="#about">About Josh</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Find Us</a></li>
+    <li><a href="tel:07850267432" class="nav-cta">📞 07850 267432</a></li>
+  </ul>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><span class="tag-dot"></span> DA6 Bexleyheath · Insurance Approved</div>
+      <h1>Exterior Bodywork<br><span class="accent">Finished Flawlessly.</span></h1>
+      <p class="hero-sub">Bexleyheath's most trusted car body repair shop. Family-run by Josh, with a dedicated low-bake spray booth and hundreds of five-star local reviews. Send photos for a free quote.</p>
+      <div class="hero-btns">
+        <a href="tel:07850267432" class="btn-primary">📞 Call Josh Now</a>
+        <a href="#work" class="btn-outline-light">See Our Work</a>
+      </div>
+      <p class="hero-note">📱 07850 267432 · Monday–Friday 8:30am–5pm</p>
+    </div>
+    <div class="hero-card">
+      <div class="hc-stars">★★★★★ <span>100+ Google Reviews</span></div>
+      <p class="hc-quote">"Reliable and trustworthy. Josh is a professional — he knows what he's doing. Very clean and efficient. Would definitely return and definitely recommend."</p>
+      <div class="hc-author">
+        <div class="hc-avi">NH</div>
+        <div>
+          <div class="hc-name">Nader Hassan</div>
+          <div class="hc-sub">Verified Google Review</div>
+        </div>
+      </div>
+      <hr class="hc-divider">
+      <div class="hc-grid">
+        <div><div class="hc-label">Rating</div><div class="hc-val">5.0 ★</div></div>
+        <div><div class="hc-label">Spray Booth</div><div class="hc-val">Low-Bake</div></div>
+        <div><div class="hc-label">Location</div><div class="hc-val">DA6 7BT</div></div>
+        <div><div class="hc-label">Insurance</div><div class="hc-val">Approved ✓</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="hero-strip-inner">
+      <div class="strip-item"><span class="strip-check">✓</span><span class="strip-text"><strong>Free Assessments</strong> — No obligation</span></div>
+      <div class="strip-item"><span class="strip-check">✓</span><span class="strip-text"><strong>All Insurers</strong> — Quotes accepted</span></div>
+      <div class="strip-item"><span class="strip-check">✓</span><span class="strip-text"><strong>Low-Bake Oven</strong> — Factory finish</span></div>
+      <div class="strip-item"><span class="strip-check">✓</span><span class="strip-text"><strong>Mon–Fri</strong> — 8:30am to 5pm</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-block"><span class="stat-num">5.0<span class="stat-accent">★</span></span><div class="stat-label">Google Rating</div></div>
+    <div class="stat-block"><span class="stat-num">100<span class="stat-accent">+</span></span><div class="stat-label">Verified Reviews</div></div>
+    <div class="stat-block"><span class="stat-num">10<span class="stat-accent">+</span></span><div class="stat-label">Years Experience</div></div>
+    <div class="stat-block"><span class="stat-num"><span class="stat-accent">£</span>0</span><div class="stat-label">Assessment Cost</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <span class="section-kicker">What We Do</span>
+    <h2>Total Exterior Restoration</h2>
+    <p class="section-lead">Every job goes through strict alignment, priming, colour-matching, and a dust-free low-bake oven cure — guaranteed to blend seamlessly with your factory finish.</p>
+    <div class="services-grid">
+      <div class="service-card fade-up" data-num="01"><span class="service-icon">🔨</span><h3 class="service-title">Dents & Panel Beating</h3><p class="service-desc">Complete extraction and reshape of structural metalwork to smooth factory contours after impacts or parking collisions.</p></div>
+      <div class="service-card fade-up" data-num="02"><span class="service-icon">✨</span><h3 class="service-title">Scuffs & Key Scratches</h3><p class="service-desc">Deep door abrasions, paint key damage, and multi-layer gouges seamlessly removed, primed, and colour-matched.</p></div>
+      <div class="service-card fade-up" data-num="03"><span class="service-icon">🎨</span><h3 class="service-title">Low-Bake Oven Resprays</h3><p class="service-desc">Enclosed spray booth ensuring dust-free paint distribution and a durable, high-bake clear coat cure — same setup as main dealers.</p></div>
+      <div class="service-card fade-up" data-num="04"><span class="service-icon">🛡️</span><h3 class="service-title">Bumper & Mirror Repairs</h3><p class="service-desc">Plastic welding and textured skin rebuilds for scuffed bumpers and mirror covers — avoiding expensive replacement costs.</p></div>
+      <div class="service-card fade-up" data-num="05"><span class="service-icon">⚡</span><h3 class="service-title">Structural Welding</h3><p class="service-desc">Heavy-duty patch alignment and clean metal joining repairs executed directly on premises, all grades of steel.</p></div>
+      <div class="service-card fade-up" data-num="06"><span class="service-icon">🪞</span><h3 class="service-title">Polish & Paint Correction</h3><p class="service-desc">Full exterior surface correction to eliminate swirl marks and oxidation — restoring a deep showroom gloss.</p></div>
+    </div>
+    <div class="insurance-strip fade-up">
+      <div>
+        <div class="ins-kicker">Insurance Claims Welcome</div>
+        <div class="ins-heading">Non-Fault Accident? We Handle the Estimate.</div>
+        <div class="ins-sub">Professional line-item quotes accepted by all major UK insurers. Stress-free from start to finish.</div>
+      </div>
+      <a href="tel:07850267432" class="btn-primary">Request a Free Estimate →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section id="work">
+  <div class="section-inner">
+    <span class="section-kicker">Proven Results</span>
+    <h2>Before & After — Real Jobs</h2>
+    <p class="section-lead">Photos shared by our customers on Google Reviews. Every repair done right here in Bexleyheath by Josh.</p>
+
+    <div class="ba-grid">
+
+      <!-- Range Rover -->
+      <div class="ba-card fade-up">
+        <div class="ba-photo-row">
+          <div class="ba-pane">
+            <img src="Wheel Arch Rust before.jpg" alt="Range Rover rear wheel arch rust damage before repair">
+            <span class="ba-pill pill-before">Before</span>
+          </div>
+          <div class="ba-pane">
+            <img src="Wheel Arch Rust After.jpg" alt="Range Rover rear wheel arch after weld and respray">
+            <span class="ba-pill pill-after">After</span>
+          </div>
+        </div>
+        <div class="ba-body">
+          <div class="ba-repair-label">Weld · Prep · Respray</div>
+          <div class="ba-repair-title">Range Rover Rear Quarter Wheel Arch — Cut, Welded & Resprayed</div>
+          <div class="ba-divider"></div>
+          <div class="ba-review-stars">★★★★★</div>
+          <p class="ba-review-text">"Josh is a professional. Very clean and efficient — difficult repair to my Range Rover, rear quarter wheel arch rust, cut and welded then prepared and sprayed. Overall excellent work. Very reasonable price."</p>
+          <div class="ba-reviewer">
+            <div class="ba-avi" style="background:#0369a1;">NH</div>
+            <div>
+              <div class="ba-reviewer-name">Nader Hassan</div>
+              <div class="ba-reviewer-meta">2 reviews · Google</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audi -->
+      <div class="ba-card fade-up">
+        <div class="ba-photo-row">
+          <div class="ba-pane">
+            <img src="markup_dent_fix_before.jpg" alt="White Audi bonnet dent before panel beating">
+            <span class="ba-pill pill-before">Before</span>
+          </div>
+          <div class="ba-pane">
+            <img src="markup_dent_fix_after.jpg" alt="White Audi bonnet after panel beating and paint match">
+            <span class="ba-pill pill-after">After</span>
+          </div>
+        </div>
+        <div class="ba-body">
+          <div class="ba-repair-label">Panel Beating · Respray</div>
+          <div class="ba-repair-title">White Audi Front Bonnet Dent — Panel Beating & Paint Match</div>
+          <div class="ba-divider"></div>
+          <div class="ba-review-stars">★★★★★</div>
+          <p class="ba-review-text">"Josh done an amazing job on my car! So friendly, kept me up to date throughout and the results speak for themselves. Would 100% recommend. Thanks so much!"</p>
+          <div class="ba-reviewer">
+            <div class="ba-avi" style="background:#7c3aed;">KJ</div>
+            <div>
+              <div class="ba-reviewer-name">Kayla Jay</div>
+              <div class="ba-reviewer-meta">Local Guide · 13 reviews · Google</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toyota -->
+      <div class="ba-card fade-up">
+        <div class="ba-photo-row">
+          <div class="ba-pane">
+            <img src="Deep Door Scratch Fix Before.jpg" alt="White Toyota deep door scratch before repair">
+            <span class="ba-pill pill-before">Before</span>
+          </div>
+          <div class="ba-pane">
+            <img src="Deep Door Scratch Fix After.jpg" alt="White Toyota door after full scratch repair and paint blend">
+            <span class="ba-pill pill-after">After</span>
+          </div>
+        </div>
+        <div class="ba-body">
+          <div class="ba-repair-label">Scratch Repair · Blend</div>
+          <div class="ba-repair-title">White Toyota Deep Door Scratch — Full Panel Blend</div>
+          <div class="ba-divider"></div>
+          <div class="ba-review-stars">★★★★★</div>
+          <p class="ba-review-text">"Had a great experience getting my car fixed here. Good price and very friendly."</p>
+          <div class="ba-reviewer">
+            <div class="ba-avi" style="background:#b45309;">BS</div>
+            <div>
+              <div class="ba-reviewer-name">Becky Spiers</div>
+              <div class="ba-reviewer-meta">Google Review</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT JOSH -->
+<section id="about" style="padding:0;">
+  <div class="about-inner">
+    <div class="about-inner-grid">
+      <div class="about-img fade-up">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1694629730583-f87f38e59219?w=700&auto=format&fit=crop&q=70" alt="Professional automotive bodywork spray preparation">
+        </div>
+        <div class="about-badge"><span class="ab-num">5.0</span><span class="ab-text">Google Rated ★</span></div>
+      </div>
+      <div class="about-content fade-up">
+        <span class="section-kicker">About</span>
+        <h2>Meet Josh.</h2>
+        <p>Josh has been working on cars his whole life. <strong>Bexleyheath Car Body Repairs</strong> is a family-run workshop tucked behind The Broadway in DA6 — not a franchise, not a chain. Just a highly skilled tradesperson with the right equipment and the right attitude.</p>
+        <p>The shop runs a <strong>dedicated low-bake spray oven booth</strong> — the same professional-grade setup used by main dealers. Colour blends are seamless, finishes last, and Josh handles every job personally.</p>
+        <p>Insurance jobs, private repairs, full resprays — <strong>every car treated like his own.</strong></p>
+        <div class="about-pills">
+          <span class="about-pill">🏠 Family Run</span>
+          <span class="about-pill">🛡️ Insurance Approved</span>
+          <span class="about-pill">🔥 Low-Bake Oven</span>
+          <span class="about-pill">📍 DA6 Bexleyheath</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS — 6 compact cards -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="reviews-head">
+      <div>
+        <span class="section-kicker">What Customers Say</span>
+        <h2>5.0★ Rated by Local Drivers</h2>
+      </div>
+      <div class="google-badge">
+        <div class="g-circle">G</div>
+        <div>
+          <div class="g-num">5.0</div>
+          <div class="g-stars">★★★★★</div>
+          <div class="g-label">Verified Google Business</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card fade-up">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Great paint and fix job by Josh after someone hit my car. Reliable and professional, honest and friendly. Seamless work. Would strongly recommend."</p>
+        <div class="rc-user">
+          <div class="rc-avi" style="background:#0284c7;">L</div>
+          <div><div class="rc-name">Laura</div><div class="rc-meta">Local Guide · Google</div></div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Great service from start to finish. The finish is flawless and looks as good as new. Fair price for the quality of work. Highly recommend!"</p>
+        <div class="rc-user">
+          <div class="rc-avi" style="background:#059669;">A</div>
+          <div><div class="rc-name">Ange</div><div class="rc-meta">Google Review</div></div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Josh done an amazing job on my car! So friendly, kept me up to date throughout and the results speak for themselves. Would 100% recommend."</p>
+        <div class="rc-user">
+          <div class="rc-avi" style="background:#7c3aed;">KJ</div>
+          <div><div class="rc-name">Kayla Jay</div><div class="rc-meta">Local Guide · Google</div></div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Very pleased with the recent work. A couple of dents sorted for a fair price and to a very reasonable timescale. Fuss free and handled very professionally."</p>
+        <div class="rc-user">
+          <div class="rc-avi" style="background:#b45309;">AS</div>
+          <div><div class="rc-name">Anne Setright</div><div class="rc-meta">Google Review</div></div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Excellent communication and different options provided. High quality finish — cannot be faulted. Wouldn't hesitate to recommend."</p>
+        <div class="rc-user">
+          <div class="rc-avi" style="background:#0369a1;">YS</div>
+          <div><div class="rc-name">Yasmeen Scotto</div><div class="rc-meta">Local Guide · Google</div></div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Reliable and trustworthy. Having seen the work over a decade before, I went back again — same high quality standard as last time."</p>
+        <div class="rc-user">
+          <div class="rc-avi" style="background:#0f172a;">KP</div>
+          <div><div class="rc-name">KAM Perera</div><div class="rc-meta">Local Guide · Google</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reviews-cta">
+      <a href="https://www.google.com/maps/place/Bexleyheath+Car+Body+Repairs/@51.4573948,0.1405616,17z" target="_blank" rel="noopener">View all reviews on Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-kicker">Find Us</span>
+    <h2>Come Down for a Free Look</h2>
+
+    <div class="contact-layout">
+
+      <!-- Left: stacked info rows -->
+      <div class="contact-rows">
+
+        <a href="tel:07850267432" class="cinfo-row fade-up">
+          <div class="cinfo-icon-box blue">📞</div>
+          <div class="cinfo-text">
+            <div class="cinfo-label">Call Us</div>
+            <div class="cinfo-main">07850 267432</div>
+            <div class="cinfo-sub">Mon–Fri · 8:30am–5pm</div>
+          </div>
+        </a>
+
+        <a href="https://wa.me/447850267432" class="cinfo-row fade-up">
+          <div class="cinfo-icon-box green">💬</div>
+          <div class="cinfo-text">
+            <div class="cinfo-label">WhatsApp Photos</div>
+            <div class="cinfo-main">Send photos for a quote</div>
+            <div class="cinfo-sub">07850 267432</div>
+          </div>
+        </a>
+
+        <div class="cinfo-row fade-up" style="cursor:default;">
+          <div class="cinfo-icon-box dark">📍</div>
+          <div class="cinfo-text">
+            <div class="cinfo-label">Address</div>
+            <div class="cinfo-main" style="font-size:0.95rem; line-height:1.4;">Rear Of 174, 174 Broadway<br>Bexleyheath, Kent DA6 7BT</div>
+            <div class="cinfo-sub">Drop-ins welcome — no appointment needed</div>
+          </div>
+        </div>
+
+        <div class="cinfo-row fade-up" style="cursor:default; align-items:flex-start;">
+          <div class="cinfo-icon-box dark">🕐</div>
+          <div class="cinfo-text" style="flex:1;">
+            <div class="cinfo-label">Opening Hours</div>
+            <div class="cinfo-hours">
+              <div class="cinfo-hour-row"><span class="day">Mon – Fri</span><span class="time">8:30am – 5:00pm</span></div>
+              <div class="cinfo-hour-row closed"><span class="day">Saturday</span><span class="time">Closed</span></div>
+              <div class="cinfo-hour-row closed"><span class="day">Sunday</span><span class="time">Closed</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cinfo-row fade-up" style="cursor:default;">
+          <div class="cinfo-icon-box dark">🚗</div>
+          <div class="cinfo-text">
+            <div class="cinfo-label">Free Estimate</div>
+            <div class="cinfo-main" style="font-size:0.95rem;">Call or drop in — same day response</div>
+            <div class="cinfo-sub">No obligation, no pressure</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: map -->
+      <div class="contact-map fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39759.35096672227!2d0.09054657407152632!3d51.4772588822288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8aef67521777d%3A0x700f7ac8734398c!2sBexleyheath%20Car%20Body%20Repairs!5e0!3m2!1sen!2suk!4v1780113462903!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bexleyheath Car Body Repairs Location"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="#" class="footer-logo">Bexleyheath <span>Car Body Repairs</span></a>
+    <div class="footer-mid">
+      © 2026 Bexleyheath Car Body Repairs · Family Run · DA6 7BT<br>
+      <span style="opacity:0.6;">Website by </span><a href="https://spurwise.co.uk" target="_blank" rel="noopener">Spurwise</a>
+    </div>
+    <nav class="footer-nav">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<a href="tel:07850267432" class="sticky-call">📞 Call Josh</a>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 55);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.services-grid .service-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.06}s`;
+});
+document.querySelectorAll('.reviews-grid .review-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.06}s`;
+});
+document.querySelectorAll('.ba-grid .ba-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.08}s`;
+});
+
+const burger = document.getElementById('burger');
+const navLinks = document.querySelector('.nav-links');
+let menuOpen = false;
+burger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  navLinks.style.cssText = menuOpen
+    ? 'display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(255,255,255,0.98);padding:1.5rem 2rem;gap:1rem;z-index:199;border-bottom:1px solid #e2e8f0;box-shadow:0 8px 24px rgba(15,23,42,0.1);'
+    : 'display:none';
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menuOpen = false; navLinks.style.display = 'none';
+}));
+</script>
+</body>
+</html>
