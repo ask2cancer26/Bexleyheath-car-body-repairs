@@ -29,8 +29,8 @@
   --green:        #25d366;
 }
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--slate-dark); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+html { scroll-behavior: smooth; margin: 0; padding: 0; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); color: var(--slate-dark); font-size: 16px; line-height: 1.6; overflow-x: hidden; margin: 0; padding: 0; }
 
 /* ─── NAV ─── */
 nav {
@@ -40,6 +40,7 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   border-bottom: 1px solid var(--border);
   box-shadow: 0 1px 8px rgba(15,23,42,0.06);
+  margin: 0;
 }
 .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; color: var(--slate-dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
 .nav-logo-dot { width: 8px; height: 8px; background: var(--electric); border-radius: 50%; display: inline-block; }
@@ -52,7 +53,7 @@ nav {
 .burger span { width: 22px; height: 2px; background: var(--slate-dark); border-radius: 2px; }
 
 /* ─── HERO ─── */
-.hero-wrap { position: relative; min-height: 100vh; background: var(--slate-dark); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.hero-wrap { position: relative; min-height: 100vh; background: var(--slate-dark); display: flex; flex-direction: column; justify-content: center; overflow: hidden; margin-top: 0; }
 .hero-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1800&auto=format&fit=crop&q=60') center/cover no-repeat; opacity: 0.22; transform: scale(1.04); animation: slow-zoom 20s ease-out forwards; }
 @keyframes slow-zoom { to { transform: scale(1.0); } }
 .hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.65) 60%, rgba(2,132,199,0.15) 100%); }
