@@ -35,22 +35,32 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--white); c
 /* ─── NAV ─── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+  background: transparent;
   height: 68px; padding: 0 2.5rem;
   display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 8px rgba(15,23,42,0.06);
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   margin: 0;
 }
-.nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; color: var(--slate-dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+nav.scrolled {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 8px rgba(15,23,42,0.06);
+}
+.nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+nav.scrolled .nav-logo { color: var(--slate-dark); }
 .nav-logo-dot { width: 8px; height: 8px; background: var(--electric); border-radius: 50%; display: inline-block; }
 .nav-links { display: flex; gap: 0.25rem; list-style: none; align-items: center; }
-.nav-links a { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); text-decoration: none; padding: 0.45rem 0.85rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
-.nav-links a:hover { color: var(--slate-dark); background: var(--bg-light); }
+.nav-links a { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.7); text-decoration: none; padding: 0.45rem 0.85rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
+.nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+nav.scrolled .nav-links a { color: var(--text-light); }
+nav.scrolled .nav-links a:hover { color: var(--slate-dark); background: var(--bg-light); }
 .nav-cta { background: var(--electric) !important; color: white !important; padding: 0.55rem 1.25rem !important; border-radius: 6px; font-weight: 700 !important; margin-left: 0.5rem; box-shadow: 0 2px 8px rgba(2,132,199,0.25); }
 .nav-cta:hover { background: var(--electric-mid) !important; color: white !important; }
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-.burger span { width: 22px; height: 2px; background: var(--slate-dark); border-radius: 2px; }
+.burger span { width: 22px; height: 2px; background: white; border-radius: 2px; transition: background 0.3s; }
+nav.scrolled .burger span { background: var(--slate-dark); }
 
 /* ─── HERO ─── */
 .hero-wrap { position: relative; min-height: 100vh; background: var(--slate-dark); display: flex; flex-direction: column; justify-content: center; overflow: hidden; margin-top: 0; }
@@ -758,6 +768,13 @@ footer { background: var(--slate-dark); padding: 2.5rem; border-top: 1px solid r
 <a href="tel:07850267432" class="sticky-call">📞 Call Josh</a>
 
 <script>
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+});
+// Set initial state
+if (window.scrollY > 10) nav.classList.add('scrolled');
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
